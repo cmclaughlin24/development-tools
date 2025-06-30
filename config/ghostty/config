@@ -1,0 +1,16 @@
+# To get the default values
+# ghostty +show-config --default --docs > ~/.config/ghostty/default-config
+
+font-family = "SpaceMono Nerd Font"
+font-size = 14
+
+theme = "tokyonight"
+background-opacity = 0.8
+background-blur-radius = 10
+
+# Some shaders can be found in this repo, they're usually uploaded to discord
+# https://github.com/hackrmomo/ghostty-shaders
+custom-shader = "shaders/bloom025.glsl"
+
+cursor-style = "block"
+shell-integration-features = "no-cursor"
