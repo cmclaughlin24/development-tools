@@ -6,6 +6,7 @@ return {
 		})
 
 		-- Normal Mode
-		vim.keymap.set("n", "<leader>gpt", vim.cmd.GpChatNew)
+		vim.keymap.set("n", "<leader>gpn", vim.cmd.GpChatNew)
+		vim.keymap.set("n", "<leader>gpf", vim.cmd.GpChatFinder)
 	end,
 }
