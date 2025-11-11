@@ -1,0 +1,332 @@
+{
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "terminal.integrated.fontFamily": "SpaceMono Nerd Font",
+  "workbench.iconTheme": "material-icon-theme",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.preferences.quoteStyle": "single",
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "arrange",
+      "color": "#CE5374",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "act",
+      "color": "#CE5374",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "assert",
+      "color": "#CE5374",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "fixme",
+      "color": "#14FFF7",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "bug",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "note",
+      "color": "#7180AC",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "todo-tree.regex.regexCaseSensitive": false,
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "background": "#FF8C00",
+      "opacity": 35,
+      "foreground": "#FFF",
+      "iconColour": "#FF8C00"
+    },
+    "FIXME": {
+      "background": "#14FFF7",
+      "opacity": 35,
+      "foreground": "#FFF",
+      "iconColour": "#14FFF7"
+    },
+    "BUG": {
+      "background": "#FF2D00",
+      "opacity": 35,
+      "foreground": "#FFF",
+      "iconColour": "#FF2D00"
+    },
+    "NOTE": {
+      "background": "#7180AC",
+      "opacity": 35,
+      "foreground": "#FFF",
+      "icon": "info",
+      "iconColour": "#7180AC"
+    }
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "NOTE"
+  ],
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<Space>",
+  "editor.cursorSurroundingLines": 8,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // VIM Overrides
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    // Split Panes (Vertical/Horizontal)
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+    // Focus Panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // Pane Actions
+    {
+      "before": ["leader", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // File Search (Windows Compat.)
+    {
+      "before": ["leader", "p", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "p", "s"],
+      "commands": ["vscode-telescope.telescope"]
+    },
+    // Editor Actions
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    {
+      "before": ["leader", "w", "w"],
+      "commands": ["workbench.action.files.saveAll"]
+    },
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    { "before": ["leader", "f", "e"], "commands": ["workbench.view.explorer"] },
+    {
+      "before": ["leader", "v", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "r", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "n", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    { "before": ["<C-j>"], "commands": ["workbench.action.previousEditor"] },
+    { "before": ["<C-k>"], "commands": ["workbench.action.nextEditor"] },
+    { "before": ["leader", "p", "p"], "after": ["\"", "+", "p"] },
+    // Terminal
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["leader", "n", "t"],
+      "commands": ["workbench.action.terminal.new"]
+    },
+    // Diagnostics
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Editor Actions
+    { "before": ["leader", "y"], "after": ["\"", "+", "y"] },
+    // VIM Overrides
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "git.confirmSync": false,
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.arrowParens": "avoid",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "npm.keybindingsChangedWarningShown": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.accessibilitySupport": "off",
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.ignoreRebaseWarning": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "material-icon-theme.files.associations": {
+    "*.controller.ts": "nest-controller",
+    "*.decorator.ts": "nest-decorator",
+    "*.go": "Go_gopher"
+  },
+  "material-icon-theme.folders.associations": {
+    "helm": "kubernetes"
+  },
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.codeLinkActivated": true,
+  "hediet.vscode-drawio.theme": "dark",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "excalidraw.theme": "dark",
+  "go.toolsManagement.autoUpdate": true,
+  "redhat.telemetry.enabled": false,
+  "git.suggestSmartCommit": false,
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.editorAssociations": {
+    "*.glb": "default"
+  },
+  "sqldeveloper.sqlHistory.historyLimit": 500,
+  "sqldeveloper.telemetry.enabled": false,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "hermes-postgres",
+      "username": "hermes",
+      "password": "pass123",
+      "database": "hermes"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MariaDB",
+      "name": "hermes-maraiadb",
+      "database": "hermes",
+      "username": "hermes",
+      "password": "pass123"
+    }
+  ],
+  "editor.fontFamily": "SpaceMono Nerd Font Mono",
+  "github.copilot.nextEditSuggestions.enabled": true
+}
