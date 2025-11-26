@@ -134,8 +134,19 @@ alias compose="docker compose"
 alias tmuxs="~/.config/nvim/scripts/tmux-sessionizer.sh"
 
 # Environment Variables
-export OPENAI_API_KEY="sk-svcacct-2gEP0nrNoylGoRnHt1-2JPPiNvXF7HW-zRPh3-G3y4T-JuuPPTWaeuKdyjeYswnEQYw4ezmHST3BlbkFJP3i2LcKW1sWUKsLDm0ThLgiW50Ze6k9F8_sHWPbj4ndKSxv4sRnnf-MYgJjBOs_N6lUwUWRAA"
+export OPENAI_API_KEY="OPENAI_API_KEY"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# Yazi
+export EDITOR="nvim"
+
+function yz() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

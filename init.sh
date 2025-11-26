@@ -83,6 +83,7 @@ SYMLINKS=(
     "$PWD/config/aerospace:~/.config/aerospace"
     "$PWD/config/ghostty:~/.config/ghostty"
     "$PWD/config/nvim:~/.config/nvim"
+    "$PWD/config/yazi:~/.config/yazi"
     "$PWD/config/.zshrc:~/.zshrc"
     "$PWD/config/.p10k.zsh:~/.p10k.zsh"
     "$PWD/config/.tmux.conf:~/.tmux.conf"
