@@ -14,6 +14,7 @@ return {
 
 		-- Normal Mode
 		vim.keymap.set("n", "<leader>fe", "<cmd>Yazi cwd<cr>", { desc = "Yazi: File Explorer" })
+		vim.keymap.set("n", "<leader>cd", "<cmd>Yazi<cr>", { desc = "Yazi: Current Directory" })
 	end,
 	init = function()
 		-- NOTE: Mark netrw as loaded so it's not loaded at all.
