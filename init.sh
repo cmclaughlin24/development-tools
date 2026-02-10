@@ -37,6 +37,7 @@ FORMULAE=(
     "zig"
     "zsh-autosuggestions"
     "zsh-syntax-highlighting"
+    "anomalyco/tap/opencode"
 )
 
 for FORMULA in "${FORMULAE[@]}"; do
