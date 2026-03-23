@@ -87,6 +87,7 @@ SYMLINKS=(
     "$PWD/config/.zshrc:~/.zshrc"
     "$PWD/config/.p10k.zsh:~/.p10k.zsh"
     "$PWD/config/.tmux.conf:~/.tmux.conf"
+    "$PWD/config/.wezterm.lua:~/.wezterm.lua"
 )
 
 for SYMLINK in "${SYMLINKS[@]}"; do
