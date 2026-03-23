@@ -216,7 +216,7 @@
     },
     { "before": ["leader", "f", "e"], "commands": ["workbench.view.explorer"] },
     {
-      "before": ["leader", "v", "c", "a"],
+      "before": ["g", "r", "a"],
       "commands": ["editor.action.quickFix"]
     },
     {
@@ -224,7 +224,11 @@
       "commands": ["editor.action.goToImplementation"]
     },
     {
-      "before": ["g", "n", "r"],
+      "before": ["g", "r", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["g", "r", "n"],
       "commands": ["editor.action.rename"],
       "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
