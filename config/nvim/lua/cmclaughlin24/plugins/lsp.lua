@@ -9,7 +9,6 @@ return {
 		"L3MON4D3/LuaSnip",
 	},
 	config = function()
-		local lsp_config = require("lspconfig")
 		local capabilities = vim.tbl_deep_extend(
 			"force",
 			{},
@@ -30,9 +29,9 @@ return {
 			},
 			handlers = {
 				function(server_name)
-					lsp_config[server_name].setup({
+                    vim.lsp.config(server_name, {
 						capabilities = capabilities,
-					})
+                    })
 					vim.lsp.enable(server_name)
 				end,
 				["lua_ls"] = function()
