@@ -31,6 +31,7 @@ FORMULAE=(
     "minikube"
     "neovim"
     "node"
+    "pnpm"
     "powerlevel10k"
     "ripgrep"
     "tmux"
