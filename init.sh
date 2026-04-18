@@ -38,6 +38,7 @@ FORMULAE=(
     "powerlevel10k"
     "ripgrep"
     "tmux"
+    "tree-sitter-cli"
     "zig"
     "zsh-autosuggestions"
     "zsh-syntax-highlighting"

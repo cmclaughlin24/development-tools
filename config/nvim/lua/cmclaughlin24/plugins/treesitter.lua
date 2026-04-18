@@ -1,39 +1,84 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	version = false,
-	build = ":TSUpdate",
-	config = function()
-		local config = require("nvim-treesitter.config")
-
-		config.setup({
-			highlight = { enable = true },
-			indent = { enable = true },
-			ensure_installed = {
-				"bash",
-				"diff",
-				"go",
-				"html",
-				"javascript",
-				"jsdoc",
-				"jsonc",
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		lazy = false,
+		init = function()
+			local parsers = {
 				"lua",
-				"luadoc",
-				"luap",
-				"markdown",
-				"markdown_inline",
-				"python",
-				"query",
-				"regex",
-				"toml",
-				"tsx",
-				"typescript",
 				"vim",
 				"vimdoc",
-				"xml",
-				"yaml",
-			},
-			sync_install = false,
-			auto_install = true,
-		})
-	end,
+				"query",
+				"javascript",
+				"typescript",
+				"tsx",
+				"html",
+				"css",
+				"json",
+				"gitignore",
+				"go",
+-- Old Parsers
+-- 				"bash",
+-- 				"diff",
+-- 				"go",
+-- 				"html",
+-- 				"javascript",
+-- 				"jsdoc",
+-- 				"jsonc",
+-- 				"lua",
+-- 				"luadoc",
+-- 				"luap",
+-- 				"markdown",
+-- 				"markdown_inline",
+-- 				"python",
+-- 				"query",
+-- 				"regex",
+-- 				"toml",
+-- 				"tsx",
+-- 				"typescript",
+-- 				"vim",
+-- 				"vimdoc",
+-- 				"xml",
+-- 				"yaml",
+
+			}
+
+			local group = vim.api.nvim_create_augroup("Cmclaughlin24Treesitter", { clear = true })
+			vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
+				group = group,
+				callback = function()
+					if vim.bo.buftype ~= "" then
+						return
+					end
+
+					pcall(vim.treesitter.start, 0)
+				end,
+			})
+
+			vim.api.nvim_create_autocmd("User", {
+				group = group,
+				pattern = "VeryLazy",
+				once = true,
+				callback = function()
+					require("nvim-treesitter").install(parsers)
+				end,
+			})
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		lazy = false,
+		config = function()
+			require("nvim-treesitter-textobjects").setup({
+				select = {
+					enable = true,
+					lookahead = true,
+					keymaps = {
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+					},
+				},
+			})
+		end,
+	},
 }
