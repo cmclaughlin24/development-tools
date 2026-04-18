@@ -9,16 +9,19 @@ else
 fi
 
 # Add Additional Repositories (Taps)
-# TAPS=("isen-ng/dotnet-sdk-versions")
-#
-# for TAP in "${TAPS[@]}"; do
-#     if ! brew tap | grep -q "^$TAP\$"; then
-#         echo "$TAP is not tapped, tapping now..."
-#         brew tap $TAP
-#     else
-#         echo "$TAP is already tapped"
-#     fi
-# done
+TAPS=(
+    # "isen-ng/dotnet-sdk-versions"
+    "anomalyco/tap/opencode"
+)
+
+for TAP in "${TAPS[@]}"; do
+    if ! brew tap | grep -q "^$TAP\$"; then
+        echo "$TAP is not tapped, tapping now..."
+        brew tap $TAP
+    else
+        echo "$TAP is already tapped"
+    fi
+done
 
 # Install Homebrew Formulae
 FORMULAE=(
