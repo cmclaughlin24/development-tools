@@ -29,13 +29,13 @@ return {
 			},
 			handlers = {
 				function(server_name)
-                    vim.lsp.config(server_name, {
+					vim.lsp.config(server_name, {
 						capabilities = capabilities,
-                    })
+					})
 					vim.lsp.enable(server_name)
 				end,
 				["lua_ls"] = function()
-					require("lspconfig").lua_ls.setup({
+					vim.lsp.config("lua_ls", {
 						capabilities = capabilities,
 						settings = {
 							Lua = {
