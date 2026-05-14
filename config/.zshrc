@@ -123,11 +123,15 @@ if [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
     export PATH="${PATH}:/opt/homebrew/bin"
 fi
 
+# Make sure Go bin is available in zsh.
+if [[ ":$PATH:" != *":$(go env GOPATH)/bin:"* ]]; then
+    export PATH="$PATH:$(go env GOPATH)/bin"
+fi
+
 # Make installed Docker zsh.
 if [[ ":$PATH:" != *"/Applications/Docker.app/Contents/Resources/bin/"* ]]; then
     export PATH="${PATH}:/Applications/Docker.app/Contents/Resources/bin/"
 fi
-
 
 # Command Aliases
 alias compose="docker compose"
