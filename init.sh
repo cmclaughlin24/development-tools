@@ -26,6 +26,7 @@ done
 # Install Homebrew Formulae
 FORMULAE=(
     "fzf"
+    "gh"
     "go"
     "helm"
     "jq"
@@ -39,6 +40,7 @@ FORMULAE=(
     "ripgrep"
     "tmux"
     "tree-sitter-cli"
+    "tuicr"
     "zig"
     "zsh-autosuggestions"
     "zsh-syntax-highlighting"
