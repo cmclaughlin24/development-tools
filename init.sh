@@ -25,6 +25,7 @@ done
 
 # Install Homebrew Formulae
 FORMULAE=(
+    "chafa"
     "fzf"
     "gh"
     "go"
